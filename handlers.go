@@ -52,6 +52,8 @@ func createTodo(w http.ResponseWriter, r *http.Request) {
 
 func updateTodo(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
+	fmt.Print()
+
 	todoID, err := strconv.Atoi(params["id"])
 	if err != nil {
 		http.Error(w, "Invalid todo ID", http.StatusBadRequest)
@@ -84,6 +86,4 @@ func deleteTodo(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Failed to delete todo", http.StatusInternalServerError)
 		return
 	}
-
-	fmt.Fprintf(w, "Todo deleted successfully")
 }
