@@ -1,0 +1,18 @@
+#todos {
+    margin-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.todo-item {
+    margin-bottom: 10px;
+}
+
+.resolve-btn {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+    margin-left: 10px;
+}
